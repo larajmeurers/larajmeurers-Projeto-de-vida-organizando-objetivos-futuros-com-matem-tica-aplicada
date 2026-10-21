@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Própria Aventura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1 id="game-title">História Interativa</h1>
+        </header>
 
-  <body>
-    <section class="conteudo-principal">
-      <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-      <div class="botoes">
-        <button class="botao">Cursos na Alura</button>
-        <button class="botao">Criar projetos em Javascript</button>
-        <button class="botao">Criar um portfolio</button>
-        <button class="botao">Atualizar meu currículo</button>
-      </div>
-    </section>
-  </body>
+        <!-- Seleção de Temas (Aparece no início ou ao reiniciar) -->
+        <div id="theme-selection" class="card">
+            <h2>Escolha um Tema para Começar:</h2>
+            <div class="theme-buttons">
+                <button class="btn theme-btn" data-theme="fantasy">
+                    🏰 Fantasia Medieval
+                </button>
+                <button class="btn theme-btn" data-theme="scifi">
+                    🚀 Ficção Científica
+                </button>
+                <button class="btn theme-btn" data-theme="mystery">
+                    🕵️ Mistério & Detetive
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo (Onde a história acontece) -->
+        <div id="story-screen" class="card hidden">
+            <div id="story-text" class="story-box">
+                <!-- O texto da história será inserido via JavaScript -->
+            </div>
+           
+            <div id="choices-container" class="choices-box">
+                <!-- Os botões de escolha serão inseridos via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Tela de Fim de Jogo -->
+        <div id="end-screen" class="card hidden">
+            <h2 id="end-title">Fim da Aventura!</h2>
+            <p id="end-text"></p>
+            <button id="restart-btn" class="btn primary-btn">🎮 Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
-.botoes {
-  display: block;
-}
-<button class="botao ativo">Cursos na Alura</button>
-<button class="botao">Criar projetos em Javascript</button>
-<button class="botao">Criar um portfolio</button>
-<button class="botao">Atualizar meu currículo</button>
-<div class="aba-conteudo ativo">
-  <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
-  <h4 class="aba-conteudo-titulo-secundario">
-    Tempo para completar o objetivo
-  </h4>
-  <div class="contador"></div>
-</div>
-<div class="aba-conteudo">
-  <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
-  <h4 class="aba-conteudo-titulo-secundario">
-    Tempo para completar o objetivo
-  </h4>
-  <div class="contador"></div>
-</div>
-<div class="aba-conteudo">
-  <h3 class="aba-conteudo-titulo-principal">
-    Criar um portfolio com os meus 3 melhores projetos
-  </h3>
-  <h4 class="aba-conteudo-titulo-secundario">
-    Tempo para completar o objetivo
-  </h4>
-  <div class="contador"></div>
-</div>
-<div class="aba-conteudo">
-  <h3 class="aba-conteudo-titulo-principal">
-    Atualizar meu currículo com os certificados da Alura
-  </h3>
-  <h4 class="aba-conteudo-titulo-secundario">
-    Tempo para completar o objetivo
-  </h4>
-  <div class="contador"></div>
-</div>
